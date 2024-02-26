@@ -24,44 +24,44 @@ public class Osoba {
         System.out.printf("E-maily: %s", String.join(", ", emaily)).println();
 
         boolean obsahujeEmail = obsahujeEmail("jan@kralovstvi.cz");
-        System.out.printf("Obsahuje e-mail 'jan@kralovstvi.cz' %b?", obsahujeEmail).println();
+        System.out.printf("Obsahuje e-mail 'jan@kralovstvi.cz'? %b", obsahujeEmail).println();
 
         pridejTelefon("739198456");
         pridejTelefon("800000000");
         pridejTelefon("212345678");
         pridejTelefon("739198456");
-        System.out.printf("Telefony poprvé: %s", String.join(", ", telefony)).println();
+        System.out.printf("Telefony poprve: %s", String.join(", ", telefony)).println();
 
         odstranTelefon("739198456");
-        System.out.printf("Telefony podruhé: %s", String.join(", ", telefony)).println();
+        System.out.printf("Telefony podruhe: %s", String.join(", ", telefony)).println();
 
         smazVsechnyTelefony();
-        System.out.printf("Počet telefonů v seznamu: %d", telefony.size()).println();
+        System.out.printf("Pocet telefonu v seznamu: %d", telefony.size()).println();
 
         boolean jeSeznamTelefonuPrazdny = jeSeznamTelefonuPrazdny();
-        System.out.printf("Je seznam telefonů prázdný? %b", jeSeznamTelefonuPrazdny).println();
+        System.out.printf("Je seznam telefonu prazdny? %b", jeSeznamTelefonuPrazdny).println();
 
-        pridejDite("Eliška");
+        pridejDite("Eliska");
         pridejDite("Eva");
         pridejDite("Edita");
         pridejDite("Ester");
-        System.out.printf("Děti: %s", String.join(", ", deti)).println();
+        System.out.printf("Deti: %s", String.join(", ", deti)).println();
 
-        boolean eliskaJe = jeNaSeznamuDite("Eliška");
-        System.out.printf("Eliška je na seznamu dětí: %b", eliskaJe).println();
+        boolean eliskaJe = jeNaSeznamuDite("Eliska");
+        System.out.printf("Eliska je na seznamu deti? %b", eliskaJe).println();
 
         Integer editaPoradi = kolikateJe("Edita");
         if (editaPoradi == null) {
-            System.out.println("Edita není na seznamu dětí.");
+            System.out.println("Edita neni na seznamu dětí.");
         } else {
-            System.out.printf("Edita je na seznamu dětí %d. v pořadí.", editaPoradi).println();
+            System.out.printf("Edita je na seznamu deti %d. v poradi.", editaPoradi).println();
         }
 
         Integer emaPoradi = kolikateJe("Ema");
-        if (emaPoradi == null) {
-            System.out.println("Ema není na seznamu dětí.");
+        if (emaPoradi == null || emaPoradi == 0) {
+            System.out.println("Ema neni na seznamu deti.");
         } else {
-            System.out.printf("Ema je na seznamu dětí %d. v pořadí.", emaPoradi).println();
+            System.out.printf("Ema je na seznamu deti %d. v poradi.", emaPoradi).println();
         }
 
         vypisDeti();

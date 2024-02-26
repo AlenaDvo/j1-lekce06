@@ -8,18 +8,18 @@ public class NakupniSeznam {
 
     public void run() {
         naplnSeznam();
-        System.out.printf("Na začátku seznam obsahuje %d položek:", seznam.size()).println();
+        System.out.printf("Na zacatku seznam obsahuje %d polozek:", seznam.size()).println();
         System.out.println(this);
 
         Polozka tretiPolozka = ziskejTretiPolozku();
-        System.out.printf("Třetí položka je: %s", tretiPolozka).println();
+        System.out.printf("Treti polozka je: %s", tretiPolozka).println();
 
         smazDruhouPolozku();
         tretiPolozka = ziskejTretiPolozku();
-        System.out.printf("Nová třetí položka je: %s", tretiPolozka).println();
+        System.out.printf("Nova treti polozka je: %s", tretiPolozka).println();
 
         pridejDalsiPolozku();
-        System.out.printf("Na konci seznam obsahuje %d položek:", seznam.size()).println();
+        System.out.printf("Na konci seznam obsahuje %d polozek:", seznam.size()).println();
         System.out.println(this);
     }
 
@@ -59,7 +59,7 @@ public class NakupniSeznam {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Nákupní seznam");
+        builder.append("Nakupni seznam");
         builder.append("\n");
         for (Polozka polozka : seznam) {
             builder.append("* ");
